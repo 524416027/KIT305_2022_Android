@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnOptions"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:backgroundTint="@color/btn_color_blue"
+            android:text="@string/options"
+            android:textAllCaps="false"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/sliderExercise"
+            style="null"
+            android:layout_width="1024dp"
+            android:layout_height="match_parent"
+            android:layout_x="128dp"
+            android:layout_y="320dp"
+            android:contentDescription="slider1"
+            android:rotation="0"
+            android:scrollbarSize="8dp"
+            android:valueFrom="0"
+            android:valueTo="1"
+            app:labelBehavior="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            tools:visibility="gone">
+
+            <Button
+                android:id="@+id/btnStartExerciseReal2"
+                android:layout_width="512dp"
+                android:layout_height="128dp"
+                android:backgroundTint="@color/btn_color_green"
+                android:text="@string/start"
+                android:textAllCaps="false"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </AbsoluteLayout>
+
+</LinearLayout>
